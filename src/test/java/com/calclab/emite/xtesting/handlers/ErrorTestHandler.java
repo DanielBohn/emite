@@ -25,9 +25,9 @@ import com.calclab.emite.core.client.events.ErrorHandler;
 
 public class ErrorTestHandler extends TestHandler<ErrorEvent> implements ErrorHandler {
 
-    @Override
-    public void onError(ErrorEvent event) {
-	addEvent(event);
-    }
+	@Override
+	public void onError(final ErrorEvent event) {
+		addEvent(event);
+	}
 
 }

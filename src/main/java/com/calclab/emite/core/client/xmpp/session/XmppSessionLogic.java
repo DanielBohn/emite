@@ -58,7 +58,7 @@ public class XmppSessionLogic extends XmppSessionBoilerPlate
    @Inject
    public XmppSessionLogic( final XmppConnection connection, final SASLManager saslManager,
                final ResourceBindingManager bindingManager, final IMSessionManager iMSessionManager,
-               SessionComponentsRegistry registry )
+               final SessionComponentsRegistry registry )
    {
       super( connection.getEventBus() );
       GWT.log( "Creating XmppSession" );
@@ -174,12 +174,6 @@ public class XmppSessionLogic extends XmppSessionBoilerPlate
    public XmppURI getCurrentUserURI()
    {
       return userUri;
-   }
-
-   @Override
-   public boolean isLoggedIn()
-   {
-      return userUri != null;
    }
 
    @Override
